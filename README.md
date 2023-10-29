@@ -10,4 +10,7 @@ It's also available at the root of the repository at `./weekly-assignment-docs/w
 
 ## Week 2
 
+You can find my design document for week 2 at https://regis365-my.sharepoint.com/:w:/g/personal/twilliams019_regis_edu/Ef0ut9B7VQRFgBQ09lZ6PzIBxQRSIgl6UXoN5J5ptOm1sA?e=pSshkt 
+
+
 Available at the root of the repository at `./weekly-assignment-docs/williams-tyler-Week2.docx`
