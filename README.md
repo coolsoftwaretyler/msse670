@@ -10,4 +10,4 @@ It's also available at the root of the repository at `./weekly-assignment-docs/w
 
 ## Week 2
 
-Available at the root of the repository at `./weekly-assignment-docs/williams-tyler-Week2.docx
+Available at the root of the repository at `./weekly-assignment-docs/williams-tyler-Week2.docx`
