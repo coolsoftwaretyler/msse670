@@ -17,6 +17,16 @@ public class DailyAdSpend {
     /** The platform where the advertisements were displayed. Should be converted to an enum in future. */
     private String platform;
 
+    /** Empty constructor */
+    public DailyAdSpend() {}
+
+    /** Constructor with all fields */
+    public DailyAdSpend(Date date, Float amountSpent, String platform) {
+        this.date = date;
+        this.amountSpent = amountSpent;
+        this.platform = platform;
+    }
+
     /**
      * Retrieves the date of the advertisement spending.
      *

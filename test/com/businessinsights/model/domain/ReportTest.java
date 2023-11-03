@@ -42,14 +42,16 @@ public class ReportTest {
 
     @Test
     public void testEqualsAndHashCode() {
-        Report report1 = new Report();
-        Report report2 = new Report();
+        Date startDate = new Date();
+        Date endDate = new Date(startDate.getTime() + 86400000); // 1 day after start date
+        Report report1 = new Report("Annual Report", "Description of annual report", "ANNUAL", startDate, endDate);
+        Report report2 = new Report("Annual Report", "Description of annual report", "ANNUAL", startDate, endDate);
 
         report1.setTitle("Report Title");
         report2.setTitle("Report Title");
 
         assertTrue(report1.equals(report2) && report2.equals(report1));
-        assertTrue(report1.hashCode() == report2.hashCode());
+        assertEquals(report1.hashCode(), report2.hashCode());
     }
 
     @Test

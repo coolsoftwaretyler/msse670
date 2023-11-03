@@ -22,6 +22,18 @@ public class Report {
     /** The end date of the reporting period. */
     private Date endDate;
 
+    /** Empty constructor */
+    public Report() {}
+
+    /** Constructor with all fields */
+    public Report(String title, String description, String reportType, Date startDate, Date endDate) {
+        this.title = title;
+        this.description = description;
+        this.reportType = reportType;
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
+
     /**
      * Retrieves the title of the report.
      *

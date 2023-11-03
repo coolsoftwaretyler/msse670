@@ -4,11 +4,6 @@ package com.businessinsights.model.domain;
  * Represents a composite class that aggregates different types of business data.
  */
 public class Composite {
-    /** We use the Composite class for the main method entry point, since it knows the most about the other domain models */
-    public static void main(String[] args) {
-        System.out.println("Program is running from an entry point in the composite class.");
-    }
-
     /** An array of DailyAdSpend objects representing daily advertisement expenditures. */
     private DailyAdSpend[] dailyAdSpends;
 
