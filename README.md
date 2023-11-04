@@ -12,5 +12,10 @@ It's also available at the root of the repository at `./weekly-assignment-docs/w
 
 You can find my design document for week 2 at https://regis365-my.sharepoint.com/:w:/g/personal/twilliams019_regis_edu/Ef0ut9B7VQRFgBQ09lZ6PzIBxQRSIgl6UXoN5J5ptOm1sA?e=pSshkt. I also uploaded it to WorldClass.
 
-
 Available at the root of the repository at `./weekly-assignment-docs/williams-tyler-Week2.docx`
+
+## Week 3
+
+You can find my design document for week 3 at https://regis365-my.sharepoint.com/:w:/g/personal/twilliams019_regis_edu/Ee3kSjwquRxLg8okN-J3I_gBh47pMjl_Hd7bDzRXJJyU9Q?e=R0Oge6. It was also uploaded to WorldClass.
+
+It's also available at the root of the repository at `./weekly-assignment-docs/williams-tyler-Week3.docx`

@@ -56,6 +56,25 @@ public class Purchase {
      */
     private Date effectiveEndTime;
 
+    /** Empty constructor */
+    public Purchase() {
+    }
+
+    /** Constructor with all fields */
+    public Purchase(String rcOriginalAppUserId, String productIdentifier, Date startTime, Boolean isTrialPeriod, Float priceInUsd, Float purchasePriceInUsd, String storeTransactionId, String originalStoreTransactionId, Integer renewalNumber, Boolean isTrialConversion, Date effectiveEndTime) {
+        this.rcOriginalAppUserId = rcOriginalAppUserId;
+        this.productIdentifier = productIdentifier;
+        this.startTime = startTime;
+        this.isTrialPeriod = isTrialPeriod;
+        this.priceInUsd = priceInUsd;
+        this.purchasePriceInUsd = purchasePriceInUsd;
+        this.storeTransactionId = storeTransactionId;
+        this.originalStoreTransactionId = originalStoreTransactionId;
+        this.renewalNumber = renewalNumber;
+        this.isTrialConversion = isTrialConversion;
+        this.effectiveEndTime = effectiveEndTime;
+    }
+
     /**
      * Retrieves the user ID of the purchaser.
      *
