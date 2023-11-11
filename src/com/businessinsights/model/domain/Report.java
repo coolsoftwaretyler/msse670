@@ -2,11 +2,14 @@ package com.businessinsights.model.domain;
 
 import java.util.Date;
 import java.util.Objects;
+import java.io.Serializable;
 
 /**
  * Represents a report containing details of a particular business insight.
  */
-public class Report {
+public class Report implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     /** The title of the report. */
     private String title;
 

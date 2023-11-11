@@ -2,12 +2,15 @@ package com.businessinsights.model.domain;
 
 import java.util.Date;
 import java.util.Objects;
+import java.io.Serializable;
 
 /**
  * Represents a purchase event as provided from an in-app payments system.
  * Contains information about the user, the product purchased, transaction details, and more.
  */
-public class Purchase {
+public class Purchase implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     /** The user ID of the purchaser. Used to group purchases together by user. */
     private String rcOriginalAppUserId;
 
