@@ -31,3 +31,5 @@ In week 4:
 5. Added an `IService` marker interface and extended it with existing service interfaces.
 6. Implemented the decoupled ServiceFactory as instructed
 7. Added `config/application.properties` file
+
+You can find my design document for week 4 at `./weekly-assignment-docs/williams-tyler-Week4.docx`. It's also been uploaded to WorldClass.
