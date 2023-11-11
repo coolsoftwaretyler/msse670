@@ -30,3 +30,4 @@ In week 4:
 4. Implemented the Serializable interface in my domain classes.
 5. Added an `IService` marker interface and extended it with existing service interfaces.
 6. Implemented the decoupled ServiceFactory as instructed
+7. Added `config/application.properties` file
