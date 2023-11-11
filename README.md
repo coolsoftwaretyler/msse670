@@ -29,3 +29,4 @@ In week 4:
 3. One of my test files already handled exceptions, so I updated the other two to do so as well.
 4. Implemented the Serializable interface in my domain classes.
 5. Added an `IService` marker interface and extended it with existing service interfaces.
+6. Implemented the decoupled ServiceFactory as instructed
