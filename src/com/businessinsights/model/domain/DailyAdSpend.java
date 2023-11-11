@@ -2,12 +2,15 @@ package com.businessinsights.model.domain;
 
 import java.util.Date;
 import java.util.Objects;
+import java.io.Serializable;
 
 /**
  * Represents daily spending on advertisements.
  * Contains information about the date, amount spent, and the platform where the ads were displayed.
  */
-public class DailyAdSpend {
+public class DailyAdSpend implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     /** The date of the advertisement spending. */
     private Date date;
 

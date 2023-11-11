@@ -13,15 +13,12 @@ public class PurchaseServiceImpl implements IPurchaseService {
 
     @Override
     public Purchase createPurchase(Purchase purchase) {
-        try {
+
             System.out.println("Creating a new purchase record for transaction ID: " + purchase.getStoreTransactionId());
             purchase.validate();
             purchases.add(purchase);
             return purchase;
-        } catch (Exception e) {
-            System.out.println("Failed to create Purchase: " + e.getMessage());
-            return null;
-        }
+
     }
 
     @Override

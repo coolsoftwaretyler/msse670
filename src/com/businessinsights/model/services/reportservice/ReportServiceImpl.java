@@ -13,7 +13,6 @@ public class ReportServiceImpl implements IReportService {
 
     @Override
     public Report createReport(Report report) {
-        try {
             System.out.println("Creating a new Report record in the service");
             if (report == null) {
                 throw new IllegalArgumentException("Report object cannot be null");
@@ -22,10 +21,6 @@ public class ReportServiceImpl implements IReportService {
             report.validate(); // Ensure the Report is valid before adding
             reports.add(report);
             return report;
-        } catch (Exception e) {
-            System.out.println("Failed to create Report: " + e.getMessage());
-            return null;
-        }
     }
 
     @Override
