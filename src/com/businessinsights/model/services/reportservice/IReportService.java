@@ -1,10 +1,11 @@
 package com.businessinsights.model.services.reportservice;
 
 import com.businessinsights.model.domain.Report;
+import com.businessinsights.model.services.IService;
 
 import java.util.List;
 
-public interface IReportService {
+public interface IReportService extends IService {
     /**
      * Creates a new report.
      *

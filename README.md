@@ -28,4 +28,4 @@ In week 4:
 2. I already had exceptions implemented in my services, so I did not add any new ones there, but I did add a custom exception to the factory.
 3. One of my test files already handled exceptions, so I updated the other two to do so as well.
 4. Implemented the Serializable interface in my domain classes.
-5. 
+5. Added an `IService` marker interface and extended it with existing service interfaces.

@@ -1,10 +1,11 @@
 package com.businessinsights.model.services.purchaseservice;
 
 import com.businessinsights.model.domain.Purchase;
+import com.businessinsights.model.services.IService;
 
 import java.util.List;
 
-public interface IPurchaseService {
+public interface IPurchaseService extends IService {
     /**
      * Creates a new purchase record.
      *

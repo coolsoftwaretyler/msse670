@@ -1,6 +1,7 @@
 package com.businessinsights.model.services.dailyadspendservice;
 
 import com.businessinsights.model.domain.DailyAdSpend;
+import com.businessinsights.model.services.IService;
 
 import java.util.Date;
 import java.util.List;
@@ -8,7 +9,7 @@ import java.util.List;
 /**
  * Interface for the service that manages DailyAdSpend CRUD operations.
  */
-public interface IDailyAdSpendService {
+public interface IDailyAdSpendService extends IService {
 
     /**
      * Creates a new DailyAdSpend record in a database.
