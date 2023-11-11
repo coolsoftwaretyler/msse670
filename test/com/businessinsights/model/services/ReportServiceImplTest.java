@@ -5,6 +5,7 @@ import com.businessinsights.model.services.reportservice.ReportServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.util.Date;
 import java.util.List;
@@ -39,8 +40,9 @@ public class ReportServiceImplTest {
 
     @Test
     public void createReport_nullReport_exceptionThrown() {
-        Report createdReport = reportService.createReport(null);
-        assertNull(createdReport);
+        Exception exception = assertThrows(Exception.class, () -> {
+            Report createdReport = reportService.createReport(null);
+        });
     }
 
     @Test

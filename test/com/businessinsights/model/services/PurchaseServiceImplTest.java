@@ -42,6 +42,15 @@ class PurchaseServiceImplTest {
     }
 
     @Test
+    void createPurchaseThrowsException() {
+        Exception exception = assertThrows(Exception.class, () -> {
+            testPurchase.setStoreTransactionId(null);
+            service.createPurchase(testPurchase);
+        });
+    }
+
+
+    @Test
     void getPurchaseByTransactionId() {
         service.createPurchase(testPurchase);
         Purchase found = service.getPurchaseByTransactionId("TXN12345");
