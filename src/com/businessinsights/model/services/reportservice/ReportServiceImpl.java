@@ -1,5 +1,6 @@
 package com.businessinsights.model.services.reportservice;
 
+import com.businessinsights.model.domain.Composite;
 import com.businessinsights.model.domain.Report;
 
 import java.util.ArrayList;
@@ -8,6 +9,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class ReportServiceImpl implements IReportService {
+
 
     private final List<Report> reports = new ArrayList<>(); // Temporary in-memory list
 
@@ -21,6 +23,28 @@ public class ReportServiceImpl implements IReportService {
             report.validate(); // Ensure the Report is valid before adding
             reports.add(report);
             return report;
+    }
+
+    @Override
+    public boolean generateReport(Composite composite) {
+        System.out.println("Generating a new report in composite");
+        if (composite == null) {
+            throw new IllegalArgumentException("Composite object cannot be null");
+        }
+
+        composite.generateReport();
+        return true;
+    }
+
+    @Override
+    public boolean getReports(Composite composite) {
+        System.out.println("Getting reports in composite");
+        if (composite == null) {
+            throw new IllegalArgumentException("Composite object cannot be null");
+        }
+
+        composite.getReports();
+        return true;
     }
 
     @Override

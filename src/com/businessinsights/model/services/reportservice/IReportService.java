@@ -1,11 +1,14 @@
 package com.businessinsights.model.services.reportservice;
 
+import com.businessinsights.model.domain.Composite;
 import com.businessinsights.model.domain.Report;
 import com.businessinsights.model.services.IService;
 
 import java.util.List;
 
 public interface IReportService extends IService {
+    public final String NAME = "IReportService";
+
     /**
      * Creates a new report.
      *
@@ -13,6 +16,22 @@ public interface IReportService extends IService {
      * @return the report created
      */
     Report createReport(Report report);
+
+    /**
+     * generates a new report from composite
+     *
+     * @param composite Composite object to use
+     * @return success true if successful
+     */
+    boolean generateReport(Composite composite);
+
+    /**
+     * Retrieves a list of reports
+     *
+     * @param composite Composite object to use
+     * @return success true if successful
+     */
+    boolean getReports(Composite composite);
 
     /**
      * Retrieves a report by its title.

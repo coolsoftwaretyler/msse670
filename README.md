@@ -33,3 +33,16 @@ In week 4:
 7. Added `config/application.properties` file
 
 You can find my design document for week 4 at `./weekly-assignment-docs/williams-tyler-Week4.docx`. It's also been uploaded to WorldClass.
+
+## Week 5
+
+In week 5:
+
+1. I started with the RunApp class to create a reasonable program execution flow that would inform the rest of my changes.
+2. Then I added a `ManagerSuperType` and an `InsightsManager` to handle the required command strings: `GENERATE_REPORT` and `LIST_REPORTS`
+3. Then I updated the `ReportService` interface and implementation to handle those methods, coordinating with the `Composite` model.
+4. Up next, I added methods to the `Composite` model that would allow it to collaborate with the `ReportService` as necessary.
+5. Then I made sure to configure the `ManagerSuperType` to work with the property file location.
+6. Finally, I updated the code to pass values around correctly.
+   
+You can find my design document with screenshots for week 5 at `./weekly-assignment-docs/williams-tyler-Week5.docx`. It's also been uploaded to WorldClass.
