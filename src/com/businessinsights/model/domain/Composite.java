@@ -1,5 +1,8 @@
 package com.businessinsights.model.domain;
 
+import java.util.ArrayList;
+import java.util.Date;
+
 /**
  * Represents a composite class that aggregates different types of business data.
  */
@@ -98,6 +101,48 @@ public class Composite {
                 }
                 purchase.validate();
             }
+        }
+    }
+
+    public void generateReport() {
+        if (dailyAdSpends != null && purchases != null) {
+            for (DailyAdSpend dailyAdSpend : dailyAdSpends) {
+                float totalSpent = dailyAdSpend.getAmountSpent();
+                float totalEarned = 0;
+
+                for (Purchase purchase : purchases) {
+                    if (purchase != null) {
+                        totalEarned += purchase.getPurchasePriceInUsd();
+                    }
+                }
+
+                float profit = totalEarned - totalSpent;
+                String title = generateDateRangeTitle(dailyAdSpend.getDate().toString());
+
+                Report profitReport = new Report();
+                profitReport.setTitle(title);
+                profitReport.setDescription("Profit: " + profit);
+                profitReport.setEndDate(new Date());
+                profitReport.setStartDate(dailyAdSpend.getDate());
+
+                addReport(profitReport);
+            }
+        }
+    }
+
+    private String generateDateRangeTitle(String date) {
+        return "Date: " + date;
+    }
+
+    private void addReport(Report report) {
+        if (reports == null) {
+            reports = new Report[]{report};
+        } else {
+            int currentLength = reports.length;
+            Report[] updatedReports = new Report[currentLength + 1];
+            System.arraycopy(reports, 0, updatedReports, 0, currentLength);
+            updatedReports[currentLength] = report;
+            reports = updatedReports;
         }
     }
 }
