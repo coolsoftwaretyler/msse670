@@ -4,7 +4,7 @@
  * Created on May 6, 2006, 12:05 PM
  */
 
-package com.businessinsights.ui;
+package com.businessinsights.view;
 
 import java.awt.Rectangle;
 import java.awt.event.ActionEvent;

@@ -1,4 +1,4 @@
-package com.businessinsights.ui;
+package com.businessinsights.view;
 
 import com.businessinsights.model.business.manager.*;
 import com.businessinsights.model.domain.*;

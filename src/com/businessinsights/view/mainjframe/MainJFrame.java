@@ -1,7 +1,8 @@
-package com.businessinsights.ui.mainjframe;
+package com.businessinsights.view.mainjframe;
 
-import com.businessinsights.ui.DailyAdSpendPanel;
-import com.businessinsights.ui.PurchasePanel;
+import com.businessinsights.view.panels.DailyAdSpendPanel;
+import com.businessinsights.view.panels.PurchasePanel;
+import com.businessinsights.view.panels.ReportPanel;
 
 import javax.swing.*;
 
@@ -17,11 +18,10 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void initComponents() {
         JTabbedPane jTabbedPane = new JTabbedPane();
-        JPanel reportPanel = new JPanel();
 
         jTabbedPane.addTab("Daily Ad Spend", new DailyAdSpendPanel());
         jTabbedPane.addTab("Purchase", new PurchasePanel());
-        jTabbedPane.addTab("Report", reportPanel);
+        jTabbedPane.addTab("Report", new ReportPanel());
 
         getContentPane().add(jTabbedPane);
 

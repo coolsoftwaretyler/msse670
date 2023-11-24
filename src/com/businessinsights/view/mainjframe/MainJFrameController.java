@@ -1,10 +1,10 @@
-package com.businessinsights.ui.mainjframe;
+package com.businessinsights.view.mainjframe;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import com.businessinsights.ui.MessageDialog;
-import com.businessinsights.ui.Utils;
+import com.businessinsights.view.MessageDialog;
+import com.businessinsights.view.Utils;
 
 public class MainJFrameController implements ActionListener {
 

@@ -1,4 +1,4 @@
-package com.businessinsights.ui;
+package com.businessinsights.view.panels;
 
 import com.businessinsights.model.domain.Purchase;
 

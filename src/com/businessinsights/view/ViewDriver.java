@@ -1,9 +1,9 @@
-package com.businessinsights.ui;
+package com.businessinsights.view;
 
 import javax.swing.UIManager;
 
-import com.businessinsights.ui.mainjframe.MainJFrame;
-import com.businessinsights.ui.mainjframe.MainJFrameController;
+import com.businessinsights.view.mainjframe.MainJFrame;
+import com.businessinsights.view.mainjframe.MainJFrameController;
 
 /**
  * ViewDriver.java
