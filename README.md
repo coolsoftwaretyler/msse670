@@ -54,3 +54,5 @@ In week 6:
 1. I pulled in the sample Java Swing code from the example project, since I don't have experience with Java Swing or JavaFX, I figured I'd start with Swing and use the sample code.
 2. I modified the code to be the sort of structure I would want: a tabbed navigation with panels for each of the domain objects, along with form fields for their data.
 3. I moved state and methods into the controller of the MainJFrame, so I could follow the MVC patterns set up in the example.
+4. Wired up the forms to take and parse input, and create domain objects
+5. Then I updated the forms to add basic exception handling.
