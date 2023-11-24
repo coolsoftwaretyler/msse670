@@ -5,12 +5,13 @@ import java.awt.*;
 
 public class ReportPanel extends JPanel {
     private final JButton generateReportButton;
+    private final JTextArea reportArea;
 
     public ReportPanel() {
         setLayout(new BorderLayout());
 
         generateReportButton = new JButton("Generate Report");
-        JTextArea reportArea = new JTextArea();
+        reportArea = new JTextArea();
 
         // Make the JTextArea scrollable
         JScrollPane scrollPane = new JScrollPane(reportArea);
@@ -21,5 +22,9 @@ public class ReportPanel extends JPanel {
 
     public JButton getGenerateReportButton() {
         return generateReportButton;
+    }
+
+    public JTextArea getReportArea() {
+        return reportArea;
     }
 }

@@ -4,8 +4,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
 
+import com.businessinsights.model.business.manager.InsightsManager;
 import com.businessinsights.model.domain.Composite;
 import com.businessinsights.model.domain.DailyAdSpend;
 import com.businessinsights.model.domain.Purchase;
@@ -13,14 +15,17 @@ import com.businessinsights.view.MessageDialog;
 import com.businessinsights.view.Utils;
 import com.businessinsights.view.panels.DailyAdSpendPanel;
 import com.businessinsights.view.panels.PurchasePanel;
+import com.businessinsights.view.panels.ReportPanel;
 
 import javax.swing.*;
 
 public class MainJFrameController implements ActionListener {
 
-    private MainJFrame mainJFrame;
+    private final MainJFrame mainJFrame;
 
-    private Composite composite = new Composite();
+    private final Composite composite = new Composite();
+
+    private InsightsManager insightsManager = new InsightsManager();
 
     public MainJFrameController(MainJFrame mainJFrame) {
         this.mainJFrame = mainJFrame;
@@ -139,7 +144,17 @@ public class MainJFrameController implements ActionListener {
 
     void reportGenerateButton_actionPerformed(ActionEvent actionEvent) {
         System.out.println("Inside MainJFrameController");
-        showMessageDialog("Generate", "Not Implemented Yet!");
+
+        // Generate report
+        insightsManager.performAction("GENERATE_REPORT", composite);
+
+        // Write reports to the JTextArea in ReportPanel
+        String reports = Arrays.toString(composite.getReports());
+        ReportPanel reportPanel = mainJFrame.getReportPanel();
+        JTextArea reportArea = reportPanel.getReportArea();
+        reportArea.setText(reports);
+
+        showMessageDialog("Generate", "Report Generated and Listed!");
     }
 
     private Float parseToFloat(String value) {

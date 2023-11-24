@@ -27,7 +27,7 @@ public class InsightsManager extends ManagerSuperType {
     /**
      * keep the constructor private to prevent instantiation by outside callers.
      */
-    private InsightsManager() {
+    public InsightsManager() {
         this.dailyAdSpendService = new DailyAdSpendServiceImpl();
         this.purchaseService = new PurchaseServiceImpl();
         this.reportService = new ReportServiceImpl();
