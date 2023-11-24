@@ -5,32 +5,43 @@ import java.awt.*;
 
 public class PurchasePanel extends JPanel {
     private final JButton submitButton;
+    private final JTextField userIdField;
+    private final JTextField productIdentifierField;
+    private final JTextField startTimeField;
+    private final JCheckBox isTrialPeriodCheckBox;
+    private final JTextField priceInUsdField;
+    private final JTextField purchasePriceInUsdField;
+    private final JTextField storeTransactionIdField;
+    private final JTextField originalStoreTransactionIdField;
+    private final JTextField renewalNumberField;
+    private final JCheckBox isTrialConversionCheckBox;
+    private final JTextField effectiveEndTimeField;
 
     public PurchasePanel() {
         setLayout(new GridLayout(12, 2));
 
         JLabel userIdLabel = new JLabel("User ID:");
-        JTextField userIdField = new JTextField();
+        userIdField = new JTextField();
         JLabel productIdentifierLabel = new JLabel("Product Identifier:");
-        JTextField productIdentifierField = new JTextField();
+        productIdentifierField = new JTextField();
         JLabel startTimeLabel = new JLabel("Start Time (dd-MM-yyyy):");
-        JTextField startTimeField = new JTextField();
+        startTimeField = new JTextField();
         JLabel isTrialPeriodLabel = new JLabel("Is Trial Period:");
-        JCheckBox isTrialPeriodCheckBox = new JCheckBox();
+        isTrialPeriodCheckBox = new JCheckBox();
         JLabel priceInUsdLabel = new JLabel("Price in USD:");
-        JTextField priceInUsdField = new JTextField();
+        priceInUsdField = new JTextField();
         JLabel purchasePriceInUsdLabel = new JLabel("Purchase Price in USD:");
-        JTextField purchasePriceInUsdField = new JTextField();
+        purchasePriceInUsdField = new JTextField();
         JLabel storeTransactionIdLabel = new JLabel("Store Transaction ID:");
-        JTextField storeTransactionIdField = new JTextField();
+        storeTransactionIdField = new JTextField();
         JLabel originalStoreTransactionIdLabel = new JLabel("Original Store Transaction ID:");
-        JTextField originalStoreTransactionIdField = new JTextField();
+        originalStoreTransactionIdField = new JTextField();
         JLabel renewalNumberLabel = new JLabel("Renewal Number:");
-        JTextField renewalNumberField = new JTextField();
+        renewalNumberField = new JTextField();
         JLabel isTrialConversionLabel = new JLabel("Is Trial Conversion:");
-        JCheckBox isTrialConversionCheckBox = new JCheckBox();
+        isTrialConversionCheckBox = new JCheckBox();
         JLabel effectiveEndTimeLabel = new JLabel("Effective End Time (dd-MM-yyyy):");
-        JTextField effectiveEndTimeField = new JTextField();
+        effectiveEndTimeField = new JTextField();
         submitButton = new JButton("Submit");
 
         add(userIdLabel);
@@ -63,4 +74,47 @@ public class PurchasePanel extends JPanel {
         return submitButton;
     }
 
+    public JTextField getUserIdField() {
+        return userIdField;
+    }
+
+    public JTextField getProductIdentifierField() {
+        return productIdentifierField;
+    }
+
+    public JTextField getStartTimeField() {
+        return startTimeField;
+    }
+
+    public JCheckBox getIsTrialPeriodCheckBox() {
+        return isTrialPeriodCheckBox;
+    }
+
+    public JTextField getPriceInUsdField() {
+        return priceInUsdField;
+    }
+
+    public JTextField getPurchasePriceInUsdField() {
+        return purchasePriceInUsdField;
+    }
+
+    public JTextField getStoreTransactionIdField() {
+        return storeTransactionIdField;
+    }
+
+    public JTextField getOriginalStoreTransactionIdField() {
+        return originalStoreTransactionIdField;
+    }
+
+    public JTextField getRenewalNumberField() {
+        return renewalNumberField;
+    }
+
+    public JCheckBox getIsTrialConversionCheckBox() {
+        return isTrialConversionCheckBox;
+    }
+
+    public JTextField getEffectiveEndTimeField() {
+        return effectiveEndTimeField;
+    }
 }

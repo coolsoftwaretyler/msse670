@@ -1,5 +1,6 @@
 package com.businessinsights.view.mainjframe;
 
+import com.businessinsights.model.domain.Report;
 import com.businessinsights.view.panels.DailyAdSpendPanel;
 import com.businessinsights.view.panels.PurchasePanel;
 import com.businessinsights.view.panels.ReportPanel;
@@ -45,6 +46,18 @@ public class MainJFrame extends javax.swing.JFrame {
 
     public JButton getReportGenerateButton() {
         return reportPanel.getGenerateReportButton();
+    }
+
+    public DailyAdSpendPanel getDailyAdSpendPanel() {
+        return dailyAdSpendPanel;
+    }
+
+    public PurchasePanel getPurchasePanel() {
+        return purchasePanel;
+    }
+
+    public ReportPanel getReportPanel() {
+        return reportPanel;
     }
 
     public static void main(String args[]) {
