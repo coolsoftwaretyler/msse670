@@ -46,3 +46,48 @@ In week 5:
 6. Finally, I updated the code to pass values around correctly.
    
 You can find my design document with screenshots for week 5 at `./weekly-assignment-docs/williams-tyler-Week5.docx`. It's also been uploaded to WorldClass.
+
+## Week 6
+
+In week 6:
+
+1. I pulled in the sample Java Swing code from the example project, since I don't have experience with Java Swing or JavaFX, I figured I'd start with Swing and use the sample code.
+2. I modified the code to be the sort of structure I would want: a tabbed navigation with panels for each of the domain objects, along with form fields for their data.
+3. I moved state and methods into the controller of the MainJFrame, so I could follow the MVC patterns set up in the example.
+4. Wired up the forms to take and parse input, and create domain objects
+5. Then I updated the forms to add basic exception handling.
+6. I deleted the old RunApp code, since the views now actually drive the codebase.
+7. Finally, I updated the report form to use the manager class to generate a report and then display how many were available.
+
+You can see the functionality in the following screenshots:
+
+### Input for a daily ad spend object
+
+`weekly-assignment-docs/2023-11-24-ad-spend-input.png`
+
+### Success of daily ad spend object
+
+`weekly-assignment-docs/2023-11-24-ad-spend-success.png`
+
+### Input for a purchase
+
+`weekly-assignment-docs/2023-11-24-purchase-input.png`
+
+### Success of a purchase
+
+`weekly-assignment-docs/2023-11-24-purchase-success.png`
+
+### Report output
+
+`weekly-assignment-docs/2023-11-24-report-output.png`
+
+### Console:
+
+`weekly-assignment-docs/2023-11-24-console-output.png`
+
+### Tests:
+
+`weekly-assignment-docs/2023-11-24-all-test-pass.png`
+
+These are included in my weekly assignment document which I have submitted to WorldClass, and is also available at `weekly-assignment-docs/williams-tyler-Week6.docx`.
+
