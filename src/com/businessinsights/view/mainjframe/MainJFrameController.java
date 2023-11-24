@@ -12,6 +12,7 @@ import com.businessinsights.model.domain.Purchase;
 import com.businessinsights.view.MessageDialog;
 import com.businessinsights.view.Utils;
 import com.businessinsights.view.panels.DailyAdSpendPanel;
+import com.businessinsights.view.panels.PurchasePanel;
 
 import javax.swing.*;
 
@@ -92,12 +93,69 @@ public class MainJFrameController implements ActionListener {
     }
 
     void purchaseSubmitButton_actionPerformed(ActionEvent actionEvent) {
-        System.out.println("Inside MainJFrameController");
-        MessageDialog dlg = new MessageDialog("Submit", "Not Implemented Yet!");
-        Utils.centerWindow(dlg);
-        dlg.setModal(true);
-        dlg.show();
-    }
+            System.out.println("Inside MainJFrameController");
+            PurchasePanel purchasePanel = mainJFrame.getPurchasePanel();
+            JTextField userIdField = purchasePanel.getUserIdField();
+            JTextField productIdentifierField = purchasePanel.getProductIdentifierField();
+            JTextField startTimeField = purchasePanel.getStartTimeField();
+            JCheckBox isTrialPeriodCheckBox = purchasePanel.getIsTrialPeriodCheckBox();
+            JTextField priceInUsdField = purchasePanel.getPriceInUsdField();
+            JTextField purchasePriceInUsdField = purchasePanel.getPurchasePriceInUsdField();
+            JTextField storeTransactionIdField = purchasePanel.getStoreTransactionIdField();
+            JTextField originalStoreTransactionIdField = purchasePanel.getOriginalStoreTransactionIdField();
+            JTextField renewalNumberField = purchasePanel.getRenewalNumberField();
+            JCheckBox isTrialConversionCheckBox = purchasePanel.getIsTrialConversionCheckBox();
+            JTextField effectiveEndTimeField = purchasePanel.getEffectiveEndTimeField();
+
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+            Date startTime = null;
+            Date effectiveEndTime = null;
+            try {
+                startTime = dateFormat.parse(startTimeField.getText());
+                effectiveEndTime = dateFormat.parse(effectiveEndTimeField.getText());
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+
+            Float priceInUsd = null;
+            Float purchasePriceInUsd = null;
+            try {
+                priceInUsd = Float.parseFloat(priceInUsdField.getText());
+                purchasePriceInUsd = Float.parseFloat(purchasePriceInUsdField.getText());
+            } catch (NumberFormatException e) {
+                e.printStackTrace();
+            }
+
+            Integer renewalNumber = null;
+            try {
+                renewalNumber = Integer.parseInt(renewalNumberField.getText());
+            } catch (NumberFormatException e) {
+                e.printStackTrace();
+            }
+
+            Purchase purchase = new Purchase(
+                    userIdField.getText(),
+                    productIdentifierField.getText(),
+                    startTime,
+                    isTrialPeriodCheckBox.isSelected(),
+                    priceInUsd,
+                    purchasePriceInUsd,
+                    storeTransactionIdField.getText(),
+                    originalStoreTransactionIdField.getText(),
+                    renewalNumber,
+                    isTrialConversionCheckBox.isSelected(),
+                    effectiveEndTime
+            );
+
+            Purchase[] purchaseArray = new Purchase[]{purchase};
+
+            composite.setPurchases(purchaseArray);
+
+            MessageDialog dlg = new MessageDialog("Submit", "Purchase Created");
+            Utils.centerWindow(dlg);
+            dlg.setModal(true);
+            dlg.show();
+        }
 
     void reportGenerateButton_actionPerformed(ActionEvent actionEvent) {
         System.out.println("Inside MainJFrameController");
