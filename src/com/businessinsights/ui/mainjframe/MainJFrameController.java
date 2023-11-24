@@ -6,118 +6,58 @@ import java.awt.event.ActionListener;
 import com.businessinsights.ui.MessageDialog;
 import com.businessinsights.ui.Utils;
 
-/**
- * MainJFrameController.java
- *
- * Listens and handles actions generated from MainJFrame.java
- *
- * @author Mike.Prasad
- */
-
-public class MainJFrameController
-        implements ActionListener
-{
+public class MainJFrameController implements ActionListener {
 
     private MainJFrame mainJFrame;
 
-    /** Creates a new instance of MainJFrameController */
     public MainJFrameController() {
     }
 
-
-    /*
-     * Copy constructor
-     */
-
-    public MainJFrameController (MainJFrame mainJFrame)
-    {
+    public MainJFrameController(MainJFrame mainJFrame) {
         this.mainJFrame = mainJFrame;
 
-        //add all the action listeners here
-        mainJFrame.getFileMenuItem().addActionListener(this);
-        mainJFrame.getDatabaseMenuItem().addActionListener(this);
-        mainJFrame.getSubmitButton().addActionListener(this);
+        // Add action listeners for the components in each tab
+//        mainJFrame.getDailyAdSpendSubmitButton().addActionListener(this);
+//        mainJFrame.getPurchaseSubmitButton().addActionListener(this);
+//        mainJFrame.getReportGenerateButton().addActionListener(this);
 
-        // center the frame
         Utils.centerWindow(mainJFrame);
         mainJFrame.setVisible(true);
     }
 
-    /*
-     *  (non-Javadoc)
-     * @see java.awt.event.ActionListener#actionPerformed(java.awt.event.ActionEvent)
-     */
-    public void actionPerformed(ActionEvent event)
-    {
-
+    public void actionPerformed(ActionEvent event) {
         System.out.println ("Inside MainJFrameController::actionPerformed");
 
-        if (event.getSource().equals(mainJFrame.getFileMenuItem()))
-            menuFileOpen_actionPerformed(event);
-        else if (event.getSource().equals(mainJFrame.getDatabaseMenuItem()))
-            menuReadDB_actionPerformed(event);
-        else if (event.getSource().equals(mainJFrame.getSubmitButton()))
-            submitButton_actionPerformed(event);
+        // Handle actions for the components in each tab
+//        if (event.getSource().equals(mainJFrame.getDailyAdSpendSubmitButton()))
+//            dailyAdSpendSubmitButton_actionPerformed(event);
+//        else if (event.getSource().equals(mainJFrame.getPurchaseSubmitButton()))
+//            purchaseSubmitButton_actionPerformed(event);
+//        else if (event.getSource().equals(mainJFrame.getReportGenerateButton()))
+//            reportGenerateButton_actionPerformed(event);
     }
 
-    /**
-     * Processes File Menu | Data | Open from File action
-     *
-     * @param actionEvent ActionEvent
-     */
-    void menuFileOpen_actionPerformed(ActionEvent actionEvent)
-    {
-
-        /*
-         * In reality, one would call the controller - BusinessInsightsController to
-         *  exercise the appropriate service. See submitButton_actionPerformed
-         *  for example.
-         */
-        MessageDialog dlg = new MessageDialog( "File Open", " Read comments in callback code");
-        Utils.centerWindow(dlg);
-        dlg.setModal(true);
-        dlg.show();
-
-        return;
-    } //end menuFileOpen_actionPerformed
-
-
-    /**
-     * Processes File Menu | Data | Open from Database menu click action
-     *
-     * @param actionEvent ActionEvent
-     */
-    void menuReadDB_actionPerformed (ActionEvent actionEvent)
-    {
-
-        /*
-         * In reality, one would call the controller - BusinessInsightsController to
-         *  exercise the appropriate service. See submitButton_actionPerformed
-         *  for example.
-         */
-        MessageDialog dlg = new MessageDialog( "File Open", " Read comments in callback code");
-        Utils.centerWindow(dlg);
-        dlg.setModal(true);
-        dlg.show();
-
-        return;
-    } //end menuReadDB_actionPerformed
-
-
-    /**
-     * Processes Submit button action
-     *
-     * @param actionEvent ActionEvent
-     */
-    void submitButton_actionPerformed(ActionEvent actionEvent)
-    {
+    void dailyAdSpendSubmitButton_actionPerformed(ActionEvent actionEvent) {
         System.out.println("Inside MainJFrameController");
-        MessageDialog dlg = new MessageDialog( "Submit", "Not Implemented Yet!");
+        MessageDialog dlg = new MessageDialog("Submit", "Not Implemented Yet!");
         Utils.centerWindow(dlg);
         dlg.setModal(true);
         dlg.show();
+    }
 
-        return;
-    } //end submitButton_actionPerformed
+    void purchaseSubmitButton_actionPerformed(ActionEvent actionEvent) {
+        System.out.println("Inside MainJFrameController");
+        MessageDialog dlg = new MessageDialog("Submit", "Not Implemented Yet!");
+        Utils.centerWindow(dlg);
+        dlg.setModal(true);
+        dlg.show();
+    }
 
-} //end class
+    void reportGenerateButton_actionPerformed(ActionEvent actionEvent) {
+        System.out.println("Inside MainJFrameController");
+        MessageDialog dlg = new MessageDialog("Generate", "Not Implemented Yet!");
+        Utils.centerWindow(dlg);
+        dlg.setModal(true);
+        dlg.show();
+    }
+}
