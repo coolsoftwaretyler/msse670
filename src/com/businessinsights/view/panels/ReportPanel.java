@@ -4,14 +4,13 @@ import javax.swing.*;
 import java.awt.*;
 
 public class ReportPanel extends JPanel {
-    private JButton generateReportButton;
-    private JTextArea reportArea;
+    private final JButton generateReportButton;
 
     public ReportPanel() {
         setLayout(new BorderLayout());
 
         generateReportButton = new JButton("Generate Report");
-        reportArea = new JTextArea();
+        JTextArea reportArea = new JTextArea();
 
         // Make the JTextArea scrollable
         JScrollPane scrollPane = new JScrollPane(reportArea);

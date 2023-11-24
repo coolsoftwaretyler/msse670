@@ -1,31 +1,20 @@
 package com.businessinsights.view.panels;
 
-import com.businessinsights.model.domain.DailyAdSpend;
-
 import javax.swing.*;
 import java.awt.*;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.text.ParseException;
 
 public class DailyAdSpendPanel extends JPanel {
-    private JLabel dateLabel;
-    private JTextField dateField;
-    private JLabel amountSpentLabel;
-    private JTextField amountSpentField;
-    private JLabel platformLabel;
-    private JTextField platformField;
-    private JButton submitButton;
+    private final JButton submitButton;
 
     public DailyAdSpendPanel() {
         setLayout(new GridLayout(5, 2));
 
-        dateLabel = new JLabel("Date:");
-        dateField = new JTextField();
-        amountSpentLabel = new JLabel("Amount Spent:");
-        amountSpentField = new JTextField();
-        platformLabel = new JLabel("Platform:");
-        platformField = new JTextField();
+        JLabel dateLabel = new JLabel("Date:");
+        JTextField dateField = new JTextField();
+        JLabel amountSpentLabel = new JLabel("Amount Spent:");
+        JTextField amountSpentField = new JTextField();
+        JLabel platformLabel = new JLabel("Platform:");
+        JTextField platformField = new JTextField();
         submitButton = new JButton("Submit");
 
         add(dateLabel);

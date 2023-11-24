@@ -46,3 +46,11 @@ In week 5:
 6. Finally, I updated the code to pass values around correctly.
    
 You can find my design document with screenshots for week 5 at `./weekly-assignment-docs/williams-tyler-Week5.docx`. It's also been uploaded to WorldClass.
+
+## Week 6
+
+In week 6:
+
+1. I pulled in the sample Java Swing code from the example project, since I don't have experience with Java Swing or JavaFX, I figured I'd start with Swing and use the sample code.
+2. I modified the code to be the sort of structure I would want: a tabbed navigation with panels for each of the domain objects, along with form fields for their data.
+3. I moved state and methods into the controller of the MainJFrame, so I could follow the MVC patterns set up in the example.
