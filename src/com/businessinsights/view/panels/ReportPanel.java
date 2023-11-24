@@ -16,12 +16,11 @@ public class ReportPanel extends JPanel {
         // Make the JTextArea scrollable
         JScrollPane scrollPane = new JScrollPane(reportArea);
 
-        generateReportButton.addActionListener(e -> {
-            // TODO: Add code to generate the report and set the text of reportArea
-            // For example: reportArea.setText(reportController.generateReport());
-        });
-
         add(generateReportButton, BorderLayout.NORTH);
         add(scrollPane, BorderLayout.CENTER);
+    }
+
+    public JButton getGenerateReportButton() {
+        return generateReportButton;
     }
 }

@@ -60,59 +60,6 @@ public class PurchasePanel extends JPanel {
         effectiveEndTimeField = new JTextField();
         submitButton = new JButton("Submit");
 
-        submitButton.addActionListener(e -> {
-            SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
-            Date startTime;
-            Date effectiveEndTime;
-            try {
-                startTime = formatter.parse(startTimeField.getText());
-                effectiveEndTime = formatter.parse(effectiveEndTimeField.getText());
-            } catch (ParseException ex) {
-                JOptionPane.showMessageDialog(this, "Invalid date format. Please use dd-MM-yyyy.");
-                return;
-            }
-
-            Float priceInUsd;
-            Float purchasePriceInUsd;
-            try {
-                priceInUsd = Float.parseFloat(priceInUsdField.getText());
-                purchasePriceInUsd = Float.parseFloat(purchasePriceInUsdField.getText());
-            } catch (NumberFormatException ex) {
-                JOptionPane.showMessageDialog(this, "Invalid amount. Please enter a valid number.");
-                return;
-            }
-
-            Integer renewalNumber;
-            try {
-                renewalNumber = Integer.parseInt(renewalNumberField.getText());
-            } catch (NumberFormatException ex) {
-                JOptionPane.showMessageDialog(this, "Invalid renewal number. Please enter a valid number.");
-                return;
-            }
-
-            Purchase purchase = new Purchase(
-                    userIdField.getText(),
-                    productIdentifierField.getText(),
-                    startTime,
-                    isTrialPeriodCheckBox.isSelected(),
-                    priceInUsd,
-                    purchasePriceInUsd,
-                    storeTransactionIdField.getText(),
-                    originalStoreTransactionIdField.getText(),
-                    renewalNumber,
-                    isTrialConversionCheckBox.isSelected(),
-                    effectiveEndTime
-            );
-
-            try {
-                purchase.validate();
-                // TODO: Add code to handle the purchase object, e.g. save it to a database
-                JOptionPane.showMessageDialog(this, "Purchase submitted successfully.");
-            } catch (IllegalStateException ex) {
-                JOptionPane.showMessageDialog(this, ex.getMessage());
-            }
-        });
-
         add(userIdLabel);
         add(userIdField);
         add(productIdentifierLabel);
@@ -138,4 +85,9 @@ public class PurchasePanel extends JPanel {
         add(new JLabel());  // Empty space
         add(submitButton);
     }
+
+    public JButton getSubmitButton() {
+        return submitButton;
+    }
+
 }
