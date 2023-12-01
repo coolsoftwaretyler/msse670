@@ -91,3 +91,16 @@ You can see the functionality in the following screenshots:
 
 These are included in my weekly assignment document which I have submitted to WorldClass, and is also available at `weekly-assignment-docs/williams-tyler-Week6.docx`.
 
+## Week 7
+
+For week 7, I decided to implement a SQLite database to back the domain objects we're creating in the program.
+
+1. I downloaded the SQLite JDBC dependencies: https://github.com/xerial/sqlite-jdbc
+2. I set it up to work in the project
+3. I added a new package called `database`, along with a class for `DatabaseSetup`
+4. I implemented Data Access Objects (DAO) for each domain
+5. I wired up the Composite model to be able to save all of its data
+6. In the manager code, where we generate reports and other objects, I wired up the Composite to save all of its data in those methods.
+7. All tests pass (screenshots available in `weekly-assignment-docs/week-7`)
+8. The GUI still works (screenshots available in `weekly-assignment-docs/week-7`)
+9. I included those files in a doc called `williams-tyler-Week7.docx` and submitted via WorldClass

@@ -33,6 +33,7 @@ public class ReportServiceImpl implements IReportService {
         }
 
         composite.generateReport();
+        composite.saveAllData();
         return true;
     }
 

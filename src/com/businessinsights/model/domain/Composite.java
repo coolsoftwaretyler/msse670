@@ -1,5 +1,10 @@
 package com.businessinsights.model.domain;
 
+import com.businessinsights.database.DailyAdSpendDAO;
+import com.businessinsights.database.PurchaseDAO;
+import com.businessinsights.database.ReportDAO;
+
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -143,6 +148,48 @@ public class Composite {
             System.arraycopy(reports, 0, updatedReports, 0, currentLength);
             updatedReports[currentLength] = report;
             reports = updatedReports;
+        }
+    }
+
+    public void saveAllData() {
+        DailyAdSpendDAO dailyAdSpendDAO = new DailyAdSpendDAO();
+        PurchaseDAO purchaseDAO = new PurchaseDAO();
+        ReportDAO reportDAO = new ReportDAO();
+
+        // Save DailyAdSpends
+        if (dailyAdSpends != null) {
+            for (DailyAdSpend dailyAdSpend : dailyAdSpends) {
+                try {
+                    dailyAdSpendDAO.saveDailyAdSpend(dailyAdSpend);
+                } catch (SQLException e) {
+                    // Handle the exception, e.g., log it or throw a runtime exception
+                    e.printStackTrace();
+                }
+            }
+        }
+
+        // Save Purchases
+        if (purchases != null) {
+            for (Purchase purchase : purchases) {
+                try {
+                    purchaseDAO.savePurchase(purchase);
+                } catch (SQLException e) {
+                    // Handle the exception
+                    e.printStackTrace();
+                }
+            }
+        }
+
+        // Save Reports
+        if (reports != null) {
+            for (Report report : reports) {
+                try {
+                    reportDAO.saveReport(report);
+                } catch (SQLException e) {
+                    // Handle the exception
+                    e.printStackTrace();
+                }
+            }
         }
     }
 }
